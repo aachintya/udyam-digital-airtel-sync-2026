@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:07,000
+A clearer business setup
+Udyam Digital helps a small business choose a useful digital
+
+2
+00:00:07,000 --> 00:00:14,000
+setup, verify its documents and follow progress in one place.
+
+3
+00:00:14,000 --> 00:00:21,000
+Gemini, with permission
+With separate permission, Gemini asks about the business.
+
+4
+00:00:21,000 --> 00:00:28,000
+Here, the owner describes a clinic with eight staff at one location.
+
+5
+00:00:28,000 --> 00:00:35,000
+Needs and budget
+The owner adds current tools, service goals and a six-thousand-rupee monthly budget.
+
+6
+00:00:35,000 --> 00:00:42,000
+Gemini interprets the request, while counts and budget remain reviewable.
+
+7
+00:00:42,000 --> 00:00:49,000
+A validated recommendation
+Gemini proposes products for every requested goal.
+
+8
+00:00:49,000 --> 00:00:56,000
+The server checks eligibility, dependencies and quantities, then calculates the clinic’s tax-inclusive quote.
+
+9
+00:00:56,000 --> 00:01:03,000
+Every change has a price
+Adding one email user changes the monthly bill immediately.
+
+10
+00:01:03,000 --> 00:01:10,000
+Setup charges and the first invoice stay visible, and the owner can edit the plan.
+
+11
+00:01:10,000 --> 00:01:17,000
+KYC permission and registry
+KYC starts with its own consent.
+
+12
+00:01:17,000 --> 00:01:24,000
+The demo business is checked against the supplied synthetic GST registry; no live government request is made.
+
+13
+00:01:24,000 --> 00:01:31,000
+Actual local OCR
+These specimen buttons run real local OCR on document images.
+
+14
+00:01:31,000 --> 00:01:38,000
+The app extracts fields and compares business names, addresses, dates and registry status.
+
+15
+00:01:38,000 --> 00:01:45,000
+Exceptions stay visible
+The cancelled K01 registration creates a visible problem.
+
+16
+00:01:45,000 --> 00:01:52,000
+Matching K02 evidence restores readiness for partner review. OCR does not certify authenticity.
+
+17
+00:01:52,000 --> 00:01:59,000
+Review before reservation
+The owner reviews the monthly bill, setup charge and first invoice.
+
+18
+00:01:59,000 --> 00:02:06,000
+This demo creates no payment or contract; it saves the plan for review.
+
+19
+00:02:06,000 --> 00:02:13,000
+Recorded partner actions
+A partner records the review, installation date and simulated completion.
+
+20
+00:02:13,000 --> 00:02:20,000
+Each transition requires a note and updates the same order history.
+
+21
+00:02:20,000 --> 00:02:27,000
+Progress survives a reload
+The owner sees what is complete and what comes next.
+
+22
+00:02:27,000 --> 00:02:34,000
+Reloading preserves the order and recorded milestones, replacing repeated status-chasing calls.
+
+23
+00:02:34,000 --> 00:02:41,000
+Phone experience and evidence
+The website supports phone layouts and Hindi.
+
+24
+00:02:41,000 --> 00:02:48,000
+The partner desk analyses five thousand synthetic leads and helps select an evidence-based pilot.

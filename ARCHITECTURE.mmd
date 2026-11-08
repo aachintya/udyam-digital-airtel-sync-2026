@@ -1,0 +1,15 @@
+flowchart LR
+ O["Owner<br/>mobile web"] --> A["Local HTTP API<br/>consent and session scope"]
+ A -. "needs consent" .-> I["Google Gemini<br/>discovery and product proposal"]
+ I --> R["Local catalogue rules<br/>price and eligibility validation"]
+ R --> C[("25 products")]
+ A --> V["On-device OCR<br/>evidence checks"]
+ V --> G[("Synthetic registries")]
+ R --> D[("SQLite workspace<br/>orders and handoffs")]
+ V --> D
+ D --> P["Partner review<br/>notes and transitions"]
+ P --> T["Owner tracker<br/>recorded milestones"]
+ classDef base fill:#f8f5ff,stroke:#7760bd,color:#28233c,stroke-width:1.5px
+ classDef external fill:#fff5f4,stroke:#c70022,color:#502333,stroke-width:1.5px
+ class O,A,R,C,V,G,D,P,T base
+ class I external
