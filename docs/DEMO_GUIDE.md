@@ -1,6 +1,6 @@
 # Live walkthrough and voiceover guide
 
-The supplied demo MP4 has subtitles and no audio track. Add your own narration using the [timed voiceover script](../submission/Voiceover-Script.md). Runtime is below three minutes.
+Watch the [final narrated demo](https://drive.google.com/file/d/1kDy5QKG6w8ETujzBu6YHIMM5fdb2Mt4M/view?usp=sharing), with subtitles and Gemini-generated male Indian English narration. Runtime: 2:48. The original silent video remains available in release v1.0. The [timed voiceover script](../submission/Voiceover-Script.md) is included for reference.
 
 1. Open Overview, then Business advisor. Enable Gemini separately from KYC permission.
 2. Describe a clinic with eight staff at one location. Let Gemini ask about current tools and goals.

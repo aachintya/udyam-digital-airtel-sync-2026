@@ -7,7 +7,7 @@
 - Seven routes pass phone-width overflow checks at 390 x 844. Browser page-error list is empty.
 - Seven-slide PDF, under 20 MB, and editable PPTX reviewed. Code/release and competitor-source links are clickable.
 - Privacy/security PDF is one page. Architecture matches the Gemini integration.
-- The demo is an edited recording of actual Gemini requests and the local app, with subtitles and no audio track for the team's voiceover. API waiting can be shortened. Phone scenes use actual app screenshots.
+- The demo is an edited recording of actual Gemini requests and the local app, with subtitles. The final Drive version adds Gemini-generated male Indian English narration. API waiting can be shortened. Phone scenes use actual app screenshots.
 
 ## Boundaries
 Government registries are synthetic. Provider activation, payment, e-sign, DigiLocker and outbound messaging are not integrated. Operator access shares a local session, not production authentication. API credentials and session databases are excluded from source and releases. Google handles cloud requests under the configured account terms; common-pattern redaction is not a guarantee of anonymity.
