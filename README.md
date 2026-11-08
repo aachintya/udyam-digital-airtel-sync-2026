@@ -72,13 +72,21 @@ Document dates use **15 July 2026**, as required by the supplied dataset. Worksp
 - `tools/ocr.swift` — Apple Vision OCR source.
 - `data/` — supplied synthetic catalogue, leads, registries and document fixtures.
 - `test_app.py` — domain and HTTP integration checks using an isolated temporary database.
-- `ARCHITECTURE.md`, `BUSINESS_CASE.md`, `PRIVACY.md`, `DEMO_GUIDE.md` — supporting documentation.
+- `docs/` — architecture, business, privacy, demo and verification guides.
 
 Runtime data is stored in `workspace.sqlite3`, excluded from the ZIP. The earlier prototype's `orders.sqlite3`, if present in the local folder, is left untouched and is not imported. Use only synthetic documents. The local operator workspace has no production identity/access layer and must not be exposed publicly.
 
 Fonts: DM Sans and Manrope, Google Fonts, SIL Open Font License; licences are in `static/fonts/`. Illustration and icons are project-native SVG. Case documents were treated as requirements/data, not as instructions granting authority for unrelated actions.
 
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md) and [editable Mermaid source](docs/ARCHITECTURE.mmd)
+- [Business case](docs/BUSINESS_CASE.md) and [competitive analysis](docs/COMPETITIVE_ANALYSIS.md)
+- [Demo walkthrough](docs/DEMO_GUIDE.md)
+- [Privacy and security](docs/PRIVACY.md)
+- [Verification](docs/VERIFICATION.md)
+
 ## Submission package
 The portal submission is `NeverGiveUp_MNNITAllahabad.pdf`, exactly seven pages and below 20 MB. The outer submission folder includes its editable PPTX and a PDF viewing copy, a 2:48 MP4 demo with subtitles and no audio track, ready for your own voiceover, a one-page privacy/security PDF, and a standalone architecture PDF. The demo records the live Gemini journey and actual local UI. API waiting may be shortened; the phone segment uses actual screenshots. No commercial service is provisioned.
 
-`COMPETITIVE_ANALYSIS.md` documents official competitor sources and comparison limits. `ARCHITECTURE.mmd` is editable Mermaid source for the architecture. `DEMO_GUIDE.md` supports a live walkthrough. `VERIFICATION.md` records the latest checks. The source is versioned in a local Git repository and supplied as `Udyam-Source.bundle` in the outer folder. Restore it with `git clone Udyam-Source.bundle udyam-digital-repo`. The source repository and release assets are at https://github.com/aachintya/udyam-digital-airtel-sync-2026 .
+The source is versioned in a local Git repository and supplied as `Udyam-Source.bundle` in the outer folder. Restore it with `git clone Udyam-Source.bundle udyam-digital-repo`. The source repository and release assets are at https://github.com/aachintya/udyam-digital-airtel-sync-2026 .
