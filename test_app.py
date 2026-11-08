@@ -1,4 +1,5 @@
 import base64,datetime,hashlib,http.cookiejar,json,tempfile,threading,unittest,urllib.request,urllib.error
+from unittest.mock import patch
 from pathlib import Path
 import app
 P=dict(segment='prof',employees=8,sites=1,seats=8,tier='1',budget=6000,current_spend=6500,needs=['internet','email','security','backup'],city='Pune',fibre='available',has_gstin=False)
@@ -60,6 +61,22 @@ class HTTPTests(unittest.TestCase):
  def req(self,path,body=None,c=None):
   r=urllib.request.Request(self.base+'/api/'+path,data=json.dumps(body).encode() if body is not None else None,headers={'Content-Type':'application/json'})
   with (c or self.c).open(r) as response:return json.load(response)
+ def test_ai_permission_is_separate_from_kyc(self):
+  state=self.req('ai-consent',{'consent':True});self.assertTrue(state['ai_consent']);self.assertFalse(state['consent'])
+  state=self.req('ai-consent',{'consent':False});self.assertFalse(state['ai_consent'])
+ def test_no_ai_request_without_opt_in(self):
+  with patch('gemini.discover',side_effect=AssertionError('No permission')):
+   result=self.req('advisor',{'message':'I run a clinic with 8 staff. Need email. Budget 6000.'});self.assertTrue(result['ready'])
+ def test_explicit_budget_survives_ai_slot_omission(self):
+  self.req('ai-consent',{'consent':True})
+  ai={'profile':dict(segment='prof',employees=8,sites=1,current_tools=['personal_email'],needs=['internet']), 'reply':'What is your budget?', 'mode':'gemini'}
+  with patch('gemini.discover',return_value=ai):
+   r=self.req('advisor',{'message':'My monthly budget including GST is 6000 rupees.'});self.assertEqual(r['profile']['budget'],6000);self.assertTrue(r['ready'])
+ def test_negated_goal_is_not_reintroduced_by_literal_checks(self):
+  self.req('ai-consent',{'consent':True})
+  ai={'profile':dict(segment='prof',employees=8,sites=1,current_tools=['personal_email'],needs=['internet'],budget=6000), 'reply':'Captured.', 'mode':'gemini'}
+  with patch('gemini.discover',return_value=ai):
+   r=self.req('advisor',{'message':'We do not need email.'});self.assertNotIn('email',r['profile']['needs'])
  def test_consent_is_required(self):
   with self.assertRaises(urllib.error.HTTPError):self.req('lookup',{'kind':'gst','value':'19EOGXH4115Y1ZL'})
  def test_masking_and_isolation(self):
